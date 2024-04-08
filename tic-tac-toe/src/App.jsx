@@ -71,7 +71,7 @@ if(!getWinner(square)&& square.every(item=>item!=='')){
           <Square value={square[8]} onClick={() => handleClick(8)} />
         </div>
        <h2 className="font-bold">{status}</h2> 
-       <button className="btn btn-danger" onClick={handleRestart}>Restart</button>
+       {square.every(item=>item!=='')&&<button className="btn btn-danger" onClick={handleRestart}>Restart</button>}
       </div>
     </>
   );
