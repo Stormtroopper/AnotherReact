@@ -38,7 +38,7 @@ export const newTrackerSlice = createSlice({
     toggleTracker:(state,action:PayloadAction<{id:string,date:string}>)=>{
       const track=state.trackers.find(tr=>tr.id===action.payload.id);
       if(track){
-        const index=track.completedDates.indexOf(action?.payload?.date);
+        const index=track.completedDates.indexOf(action?.payload.date);
         index>-1?track.completedDates.splice(index,1):track.completedDates.push(action.payload.date);
       } 
     },
